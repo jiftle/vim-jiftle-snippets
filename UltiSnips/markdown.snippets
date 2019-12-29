@@ -1,6 +1,6 @@
 # ~/.vim/UltiSnips/markdown.snippets
 
-snippet head
+snippet head-daily
 ---
 title: `!v strftime("%Y-%m-%d %A")` Daily
 time: `!v strftime("%Y-%m-%d %H:%M")`
@@ -27,22 +27,31 @@ notebook: diary
 
 endsnippet
 
+snippet head-blog
+---
+title: `!v expand('%:t')`
+time: `!v strftime("%Y-%m-%d %H:%M")`
+tags: Markdown,blog
+notebook: blog
+---
+
+endsnippet
 # --------------- GTD 每周回顾 ---------------
 snippet gtd
-# [GTD] GTD每周回顾与检讨
+# [GTD] `!v strftime("%Y-%m-第%W周")` GTD每周回顾与检讨
 
-## 工作成果
+## 学到了什么
 
-## 学习进度
+## 取得了哪些成就
 
-## 思想感悟
+## 得到了哪些教训
 
-## 总结
+## 总结及反思
 
 endsnippet
 
 # --------------- 每周工作周报 ------------------
-snippet wrkrpt
+snippet wrk-rpt
 # 工作周报--提交钉钉，认真写
 
 ## 本周工作重点(成绩体现，重要写)
@@ -55,6 +64,6 @@ snippet wrkrpt
 
 ## 下周工作计划(一定不能写无啊)
 
-## 备注(项目周报)
+## 备注(项目周报，不是项目经理不用写)
 
 endsnippet
