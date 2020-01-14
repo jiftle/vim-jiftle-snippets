@@ -18,7 +18,6 @@ notebook: diary-`!v strftime("%Y")`
 
 #  `!v strftime("%Y-%m-%d %A")` Daily
 
-
 endsnippet
 # vim:ft=snippets:
 
@@ -32,7 +31,6 @@ notebook: diary-`!v strftime("%Y")`
 
 # `!v strftime("%Y-%m-%d %A")` Diary
 
-
 endsnippet
 
 snippet head-blog "博客-文件头" b
@@ -43,7 +41,24 @@ tags: Markdown,GitMdNote,blog-`!v strftime("%Y-%m")`
 notebook: blog
 ---
 
+# `!v expand('%:t')`
+
 endsnippet
+
+
+snippet head-report "报告-文件头" b
+---
+title: `!v expand('%:t')`
+time: `!v strftime("%Y-%m-%d %H:%M")`
+tags: Markdown,GitMdNote,diary-`!v strftime("%Y-%m")`,diary-report-`!v strftime("%Y-%m")`
+notebook: diary-`!v strftime("%Y")`
+---
+
+# `!v expand('%:t')`
+
+endsnippet
+
+
 # --------------- GTD 每周回顾 ---------------
 snippet gtd "GTD时间管理-文件头" b
 # [GTD] `!v strftime("%Y-%m-第%W周")` GTD每周回顾与检讨
@@ -75,3 +90,11 @@ snippet wrk-rpt "工作周报-模板" b
 ## 备注(项目周报，不是项目经理不用写)
 
 endsnippet
+
+# 自动插入表格
+snippet table "表格" b
+| 字段1 | 字段2 |
+| :--- | :--- |
+| 值 | 60M |
+endsnippet
+
