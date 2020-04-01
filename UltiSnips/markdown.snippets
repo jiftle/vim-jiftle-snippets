@@ -1,25 +1,32 @@
 # ~/.vim/UltiSnips/markdown.snippets
+# b 标识只有在行首，代码片段才起作用
+snippet head "Markdown默认文件头" b
+# `!v expand("%:t")`
 
-snippet head-daily
+endsnippet
+# vim:ft=snippets:
+
+# b 标识只有在行首，代码片段才起作用
+snippet head-daily "工作日志-文件头" b
 ---
 title: `!v strftime("%Y-%m-%d %A")` Daily
 time: `!v strftime("%Y-%m-%d %H:%M")`
-tags: Markdown,daily
-notebook: diary
+tags: Markdown,GitMdNote,diary-`!v strftime("%Y-%m")`,diary-workdaily-`!v strftime("%Y-%m")`
+notebook: diary-`!v strftime("%Y")`
 ---
 
-#  `!v strftime("%Y-%m-%d %A")` Daily
+# `!v strftime("%Y-%m-%d %A")` Daily
 
 
 endsnippet
 # vim:ft=snippets:
 
-snippet head-diary
+snippet head-diary "个人笔记-文件头" b
 ---
 title: `!v strftime("%Y-%m-%d %A")` Diary
 time: `!v strftime("%Y-%m-%d %H:%M")`
-tags: Markdown,diary
-notebook: diary
+tags: Markdown,GitMdNote,diary-`!v strftime("%Y-%m")`,diary-homediary-`!v strftime("%Y-%m")`
+notebook: diary-`!v strftime("%Y")`
 ---
 
 # `!v strftime("%Y-%m-%d %A")` Diary
@@ -27,22 +34,48 @@ notebook: diary
 
 endsnippet
 
+snippet head-blog "博客-文件头" b
+---
+title: `!v expand('%:t')`
+time: `!v strftime("%Y-%m-%d %H:%M")`
+tags: Markdown,GitMdNote,blog-`!v strftime("%Y-%m")`
+notebook: blog
+---
+
+# `!v expand('%:t')`
+
+endsnippet
+
+
+snippet head-report "报告-文件头" b
+---
+title: `!v expand('%:t')`
+time: `!v strftime("%Y-%m-%d %H:%M")`
+tags: Markdown,GitMdNote,diary-`!v strftime("%Y-%m")`,diary-report-`!v strftime("%Y-%m")`
+notebook: diary-`!v strftime("%Y")`
+---
+
+# `!v expand('%:t')`
+
+endsnippet
+
+
 # --------------- GTD 每周回顾 ---------------
-snippet gtd
-# [GTD] GTD每周回顾与检讨
+snippet gtd "GTD时间管理-文件头" b
+# [GTD] `!v strftime("%Y-%m-第%W周")` GTD每周回顾与检讨
 
-## 工作成果
+## 学到了什么
 
-## 学习进度
+## 取得了哪些成就
 
-## 思想感悟
+## 得到了哪些教训
 
-## 总结
+## 总结及反思
 
 endsnippet
 
 # --------------- 每周工作周报 ------------------
-snippet wrkrpt
+snippet wrk-rpt "工作周报-模板" b
 # 工作周报--提交钉钉，认真写
 
 ## 本周工作重点(成绩体现，重要写)
@@ -55,6 +88,28 @@ snippet wrkrpt
 
 ## 下周工作计划(一定不能写无啊)
 
-## 备注(项目周报)
+## 备注(项目周报，不是项目经理不用写)
+
+endsnippet
+
+# --------------- 自动插入表格 ----------------
+snippet table "表格" b
+| 字段1 | 字段2 |
+| :--- | :--- |
+| 值 | 60M |
+endsnippet
+
+
+# --------------- 工作日报 ------------------
+snippet wrk-drpt "工作日报-模板" b
+# `!v strftime("%Y-%m-%d %A")` 工作日报
+
+## 今日完成工作
+
+## 未完成工作
+
+## 需要协调工作
+
+## 备注
 
 endsnippet
