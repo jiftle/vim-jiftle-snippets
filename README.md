@@ -8,6 +8,22 @@ vim-snippets for me
 定义自己的片段插件
 有可能形成自己的插件大杂烩
 
+## Required
+
+- vim-snippets
+
+## Install
+
+```
+" ---------------- 快捷代码块 --------------
+" 支持代码片段功能
+Plug 'SirVer/ultisnips'
+" 常用的代码片段
+Plug 'honza/vim-snippets'
+" 自定义片段插件，解决键位YCM冲突
+Plug 'jiftle/vim-jiftle-snippets'
+```
+
 ## History
 
 - 2019-12-24 加入解决YCM冲突功能，插件脚本  --已实现
