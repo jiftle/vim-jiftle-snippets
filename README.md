@@ -34,4 +34,5 @@ Plug 'jiftle/vim-jiftle-snippets'
   - markdown模板修改
 - 2020-01-08
   - markdown笔记模板修改，加入GitMdNote标签
-
+- 2020-10-22
+    - 去掉处理ycm和UltiSnips冲突的vim脚本，目的，为了使用coc.vim自动语法提示coc-snippets
