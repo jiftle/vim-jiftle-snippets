@@ -37,8 +37,11 @@ endsnippet
 snippet head-blog "博客-文件头" b
 ---
 title: `!v expand('%:t')`
-time: `!v strftime("%Y-%m-%d %H:%M")`
+date: `!v strftime("%Y-%m-%d %H:%M")`
+updated: `!v strftime("%Y-%m-%d %H:%M")`
 tags: Markdown,GitMdNote,blog-`!v strftime("%Y-%m")`
+categories: 技术文章
+time: `!v strftime("%Y-%m-%d %H:%M")`
 notebook: blog
 ---
 
